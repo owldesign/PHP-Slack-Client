@@ -1,0 +1,37 @@
+{
+  "name": "owldesign/slack-client",
+  "type": "library",
+  "description": "A basic Slack client library providing simple posting to Slack channels using the webhook API.",
+  "keywords": [
+    "Slack",
+    "API"
+  ],
+  "homepage": "http://owl-design.net/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vadim Goncharov",
+      "email": "vadim@owl-design.net",
+      "homepage": "https://owl-design.net"
+    },
+    {
+      "name": "Martin Brecht-Precht",
+      "email": "mb@markenwerk.net",
+      "homepage": "http://markenwerk.net"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Owldesign\\SlackClient\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.3",
+    "markenwerk/basic-http-client": "~3.0",
+    "markenwerk/common-exceptions": "~3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">=4.8.26",
+    "codeclimate/php-test-reporter": "dev-master"
+  }
+}
