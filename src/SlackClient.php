@@ -2,16 +2,16 @@
 
 namespace Owldesign\SlackClient;
 
-use Owldesign\BasicHttpClient\Request\Message\Body\Body;
-use Owldesign\BasicHttpClient\Request\Message\Header\Header;
-use Owldesign\BasicHttpClient\Request\Message\Message;
-use Owldesign\BasicHttpClient\Request\Request;
-use Owldesign\BasicHttpClient\Request\Transport\HttpsTransport;
-use Owldesign\CommonException\ApiException\UnexpectedResponseException;
-use Owldesign\CommonException\NetworkException\ConnectionTimeoutException;
-use Owldesign\CommonException\NetworkException\CurlException;
-use Owldesign\CommonException\ParserException\StringifyException;
-use Owldesign\UrlUtil\Url;
+use Markenwerk\BasicHttpClient\Request\Message\Body\Body;
+use Markenwerk\BasicHttpClient\Request\Message\Header\Header;
+use Markenwerk\BasicHttpClient\Request\Message\Message;
+use Markenwerk\BasicHttpClient\Request\Request;
+use Markenwerk\BasicHttpClient\Request\Transport\HttpsTransport;
+use Markenwerk\CommonException\ApiException\UnexpectedResponseException;
+use Markenwerk\CommonException\NetworkException\ConnectionTimeoutException;
+use Markenwerk\CommonException\NetworkException\CurlException;
+use Markenwerk\CommonException\ParserException\StringifyException;
+use Markenwerk\UrlUtil\Url;
 
 /**
  * Class SlackClient
