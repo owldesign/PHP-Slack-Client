@@ -11,7 +11,7 @@ use Markenwerk\CommonException\ApiException\UnexpectedResponseException;
 use Markenwerk\CommonException\NetworkException\ConnectionTimeoutException;
 use Markenwerk\CommonException\NetworkException\CurlException;
 use Markenwerk\CommonException\ParserException\StringifyException;
-use Owldesign\UrlUtil\Url;
+use Markenwerk\UrlUtil\Url;
 
 /**
  * Class SlackClient
