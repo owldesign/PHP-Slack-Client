@@ -11,7 +11,7 @@ use Markenwerk\CommonException\ApiException\UnexpectedResponseException;
 use Markenwerk\CommonException\NetworkException\ConnectionTimeoutException;
 use Markenwerk\CommonException\NetworkException\CurlException;
 use Markenwerk\CommonException\ParserException\StringifyException;
-use Markenwerk\UrlUtil\Url;
+use Owldesign\UrlUtil\Url;
 
 /**
  * Class SlackClient
@@ -24,39 +24,7 @@ class SlackClient
 	/**
 	 * @var string
 	 */
-	private $subdomainName;
-
-	/**
-	 * @var string
-	 */
 	private $webhook;
-
-	/**
-	 * @var string
-	 */
-	private $username = 'PHP Slack Client';
-
-	/**
-	 * @return string
-	 */
-	public function getSubdomainName()
-	{
-		return $this->subdomainName;
-	}
-
-	/**
-	 * @param string $subdomainName
-	 * @return $this
-	 */
-	public function setSubdomainName($subdomainName)
-	{
-		if (!is_string($subdomainName)) {
-			$argumentType = (is_object($subdomainName)) ? get_class($subdomainName) : gettype($subdomainName);
-			throw new \InvalidArgumentException('Expected the subdomain name as string. Got ' . $argumentType);
-		}
-		$this->subdomainName = $subdomainName;
-		return $this;
-	}
 
 	/**
 	 * @return string
@@ -80,27 +48,6 @@ class SlackClient
 		return $this;
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getUsername()
-	{
-		return $this->username;
-	}
-
-	/**
-	 * @param string $username
-	 * @return $this
-	 */
-	public function setUsername($username)
-	{
-		if (!is_string($username)) {
-			$argumentType = (is_object($username)) ? get_class($username) : gettype($username);
-			throw new \InvalidArgumentException('Expected the username as string. Got ' . $argumentType);
-		}
-		$this->username = $username;
-		return $this;
-	}
 
 	/**
 	 * @param string $channel
@@ -159,7 +106,6 @@ class SlackClient
 	{
 		$payload = array(
 			'channel' => $receiver,
-			'username' => $this->getUsername(),
 			'text' => $slackMessage->getText(),
 			'unfurl_links' => $slackMessage->getUnfurlLinks(),
 			'unfurl_media' => $slackMessage->getUnfurlMedia(),
